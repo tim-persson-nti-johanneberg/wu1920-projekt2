@@ -1,0 +1,275 @@
+/*Varför funkar inte mitt hover*/
+body{
+    font-family: 'Actor', sans-serif;
+    background-color: #2A363B;
+    color: #FFFF;
+    margin: 0%;
+    max-height: 100vh;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+
+a:link {
+    text-decoration: none;
+  }
+header{
+    position: relative;
+    margin: 0%;
+    display: block;
+    background-color: #FBFF44;
+    z-index: 2;
+    margin-bottom: 0%;
+}
+header img{
+    width: 12%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2vh;
+    padding-bottom: 2%;
+
+}
+header img:hover{
+    filter: invert(100%);
+}
+nav{
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 0px;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    background-color: #FBFF44;
+}
+nav a{
+    color: black;
+    text-align: center;
+    font-weight: medium;
+    font-size: 1vw;
+    padding-bottom: 5%;
+}
+nav a:hover{
+    color: #FFFF;
+}
+
+article{
+    display: block;
+    background-color: #171e1f;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3%;
+    padding-top: 1%;
+    padding-bottom: 0.5%;
+}
+article p{
+    font-size: 1.5vw;
+}
+article h1{
+    font-size: 4.5vw;
+    color: #755EF0; 
+}
+.graphicshowcase{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.graphicshowcase a{
+    flex-grow: 1;
+    padding-bottom: 1%;
+
+}
+.graphicshowcase img{
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.graphicshowcase img:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.05);
+    z-index: 3;
+}
+
+.productwrapper{
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    display: grid;
+    grid-template-areas: 
+    "p1 img1"
+    "img2 p2";
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    
+}
+.productwrapper p{
+    padding: 5%;
+    font-size: 1vw;
+    margin: 0%;
+    float: left;
+    text-align: justify;
+
+}
+.productwrapper img{
+    max-width: auto;
+
+}
+
+.productwrapper #p1{
+    margin-top: 2%;
+    grid-area: p1;
+    background-color: #58E873;
+
+}
+.productwrapper #img1{
+    margin-top: 2%;
+    grid-area: img1;
+    background-color: #58E873;
+
+}
+.productwrapper #p2{
+    grid-area: p2;
+    background-color: #ffe400;
+
+}
+.productwrapper #img2{
+    grid-area: img2;
+    background-color: #ffe400;
+
+}
+
+.gallery{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.gallery img {
+max-width: 25%;
+float: left;
+padding: 0 1% 1% 0;
+-webkit-transform: scale(1);
+transform: scale(1);
+-webkit-transition: .3s ease-in-out;
+transition: .3s ease-in-out;
+/* Yes, you *can* adjust/remove padding. */
+}
+.gallery img:hover{
+-webkit-transform: scale(1.1);
+transform: scale(1.05);
+}
+
+.contactwrapper{
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+
+}
+#ctext
+{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+.contactwrapper p h1{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+.instagram-media-wrapper{
+    width: 20%;
+    grid-area: insta;
+}
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 1.5vh;
+    border: 1px solid #ccc;
+    border-radius: 1vh;
+    box-sizing: border-box;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #c9b503;
+    color: white;
+    padding: 1vh;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #ffe400;
+  }
+  
+  .formcontainer {
+      margin-left: auto;
+      margin-right: auto;
+    background-color: none;
+    width: 20%;
+
+  }
+
+@media screen and (max-width: 1030px) {
+    nav a{
+        font-size: 3vw;
+    }
+    nav{
+        padding-top: 5%;
+        width: 90%;
+    }
+    header img{
+      width: 30%;
+    }
+    article{
+        width: 75%;
+    }
+    article p{
+        font-size: 2vh;
+        font-weight: normal;
+        line-height: 2.5vh;
+    }
+    article h1{
+        font-size: 3vh;
+    }
+    .productwrapper{
+        width: 100%;
+    }
+    .productwrapper p{
+        font-weight: lighter;
+        font-size: 3vw;
+    }
+    .graphicshowcase{
+        width: 100%;
+    }
+    .gallery{
+        width: 100%;
+    }
+    .gallery img{
+        max-width: 100%;
+    }
+    .formcontainer{
+        width: 100%;
+    }
+    #ctext{
+        width: 75%;
+    }
+}
