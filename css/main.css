@@ -150,33 +150,54 @@ article h1{
     background-color: #ffe400;
 
 }
-
 .gallery{
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-}
-.gallery img {
-max-width: 25%;
-float: left;
-padding: 0 1% 1% 0;
--webkit-transform: scale(1);
-transform: scale(1);
--webkit-transition: .3s ease-in-out;
-transition: .3s ease-in-out;
-/* Yes, you *can* adjust/remove padding. */
-}
-.gallery img:hover{
--webkit-transform: scale(1.1);
-transform: scale(1.05);
-}
-
-.contactwrapper{
     margin-left: auto;
     margin-right: auto;
     width: 75%;
+}
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 32px;
+  }
+  
+  .row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+#tips2  {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
 
 }
+
 #ctext
 {
     text-align: center;
@@ -185,17 +206,14 @@ transform: scale(1.05);
     margin-right: auto;
     width: 30%;
 }
-.contactwrapper p h1{
+#tips2 p h1{
     text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 30%;
 }
-.instagram-media-wrapper{
-    width: 20%;
-    grid-area: insta;
-}
+
 input[type=text], select, textarea {
     width: 100%;
     padding: 1.5vh;
@@ -207,30 +225,59 @@ input[type=text], select, textarea {
     resize: vertical;
   }
   
-  input[type=submit] {
+
+
+
+#skicka2 {
     background-color: #c9b503;
     color: white;
+    width: 30%;
     padding: 1vh;
+    display: block;
     border: none;
     border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  input[type=submit]:hover {
-    background-color: #ffe400;
-  }
-  
-  .formcontainer {
-      margin-left: auto;
-      margin-right: auto;
-    background-color: none;
-    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
 
+#skicka:hover {
+    background-color: black;
   }
 
+
+#tack2 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-top: 1em;
+    width: 300px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;  
+    filter: alpha(opacity=0);  
+    zoom: 1;  
+    font-size: 3vh; 
+}
+
+#tack2.active {
+    opacity: 100%;
+    opacity: 1;  
+    filter: alpha(opacity=100);  
+    zoom: 1;  
+}
+
+#tips2.active {
+    display: none;
+}
+
+#skicka2.active {
+    display: none;
+}
 @media screen and (max-width: 1030px) {
     nav a{
-        font-size: 3vw;
+        font-size: 3.5vw;
     }
     nav{
         padding-top: 5%;
@@ -239,6 +286,7 @@ input[type=text], select, textarea {
     header img{
       width: 30%;
     }
+
     article{
         width: 75%;
     }
@@ -271,5 +319,8 @@ input[type=text], select, textarea {
     }
     #ctext{
         width: 75%;
+    }
+    #tips2 h1, p{
+        font-size: 90%;
     }
 }
